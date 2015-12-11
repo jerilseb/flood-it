@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="flood.css">
+	<title>Flood</title>
+
+</head>
+<body data-bind="css: rows[0][0].color">
+
+<table>
+	<tbody data-bind="foreach: rows">
+		<tr data-bind="foreach: $data">
+			<td data-bind="css: color, click: flood">&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<div id="bar">
+
+	<div id="count" data-bind="css: { bad: moveCount > expected }">
+		<span data-bind="text: moveCount"></span>
+		/
+		<span data-bind="text: expected"></span>
+	</div>
+
+	<div id="controls">
+		<a href="#" data-bind="click: askAboutReset">
+			<img src="restart.svg">
+		</a>
+	</div>
+
+</div>
+
+<script src="knockout.js"></script>
+<script src="knockout-es5.js"></script>
+<script src="flood.js"></script>
+
+</body>
+</html>

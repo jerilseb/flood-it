@@ -1,0 +1,70 @@
+.red { background-color: #db2556 }
+.orange { background-color: orange }
+.yellow { background-color: #efec37 }
+.green { background-color: #38d11d }
+.blue { background-color: #096975 }
+.violet { background-color: #750965 }
+
+html {
+	width: 100%;
+	height: 100%;
+	display: table;
+	font-family: Lato, "Segoe UI", Avenir, Ubuntu, Tahoma, Verdana, Helvetica, sans-serif;
+	font-size: 16pt;
+	color: white;
+	background-color: black;
+}
+
+body {
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	transition: background-color 1s ease-out;
+}
+
+table {
+	margin: 0 auto 1em auto;
+	border: 2px solid white;
+	box-shadow: 0 0 20px white;
+	width: 60vh;
+	height: 60vh;
+	border-collapse: collapse;
+}
+
+td {
+	transition: background-color .2s linear;
+	-webkit-user-select: none;
+	-khtml-user-drag: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	user-select: none;
+	cursor: pointer;
+}
+
+#bar {
+	margin: 0 auto;
+	width: 400px;
+}
+
+#count {
+	float: left;
+}
+
+#count.bad {
+	font-weight: bold;
+	color: red;
+}
+
+.red #count.bad {
+	color: black;
+}
+
+#controls {
+	text-align: right;
+}
+
+#controls img {
+	height: 16pt;
+}
